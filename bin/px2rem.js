@@ -39,7 +39,7 @@ program.version(pkg.version)
   .option('-b, --baseDpr [value]', 'set base device pixel ratio (default: 2)', 2)
   .option('-p, --remPrecision [value]', 'set rem value precision (default: 6)', 6)
   .option('-o, --output [path]', 'the output file dirname')
-  .option('-k, --keepFontSize [path]', 'whether to keep font size (default true)')
+  .option('-f, --keepFontSize [value]', 'whether to keep font size (default true)')
   .parse(process.argv);
 
 if (!program.args.length) {

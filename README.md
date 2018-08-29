@@ -54,6 +54,7 @@ $ px2rem -o build src/*.css
     -b, --baseDpr [value]           set base device pixel ratio (default: 2)
     -p, --remPrecision [value]      set rem value precision (default: 6)
     -o, --output [path]             the output file dirname
+    -f, --keepFontSize [value]      whether to keep font size (default true)')
 ```
 
 ### API
