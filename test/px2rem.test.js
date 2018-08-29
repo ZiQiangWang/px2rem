@@ -64,3 +64,16 @@ describe('should work with @3x origin css file', function () {
     assert.equal(outputText, fs.readFileSync(expectedPath, {encoding: 'utf8'}));
   });
 });
+
+describe('check keepFontSize property', function () {
+  var px2remIns = new Px2rem(/*{remUnit: 75, baseDpr: 2}*/);
+  var srcPath = path.join(__dirname, 'assets/font.css');
+  var srcText = fs.readFileSync(srcPath, {encoding: 'utf8'});
+
+  it('[default] should output right rem file', function () {
+    var expectedPath = path.join(__dirname, 'output/font.css');
+    var outputText = px2remIns.generateRem(srcText);
+    assert.equal(outputText, fs.readFileSync(expectedPath, {encoding: 'utf8'}));
+  });
+});
+
